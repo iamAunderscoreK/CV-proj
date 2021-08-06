@@ -25,7 +25,7 @@ def read_data(folder, file):
 
     print("Reading original and warped image datapoints...")
 
-    with open(os.path.join("boat", "homography.txt"), "r") as file:
+    with open(os.path.join("images_DLT", "homography.txt"), "r") as file:
         image_data = [line for line in file]
 
     image1 = image_data[0]
@@ -112,7 +112,7 @@ def get_vector_h(matrix_V):
 
 def main():
     # read image data points
-    image1, image2 = read_data("boat", "homography.txt")
+    image1, image2 = read_data("images_DLT", "homography.txt")
 
     # set data points to numpy arrays
     image1 = np.array(image1)
