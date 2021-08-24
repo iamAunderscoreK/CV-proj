@@ -46,23 +46,18 @@ for fname in images:
     cv.imshow('img',img)
     cv.waitKey(0)
 
-cv.destroyAllWindows()
+    cv.destroyAllWindows()
 
-h,w = img.shape[:2]
+    h,w = img.shape[:2]
 
-"""
-Performing camera calibration by 
-passing the value of known 3D points (objpoints)
-and corresponding pixel coordinates of the 
-detected corners (imgpoints)
-"""
-ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, gray.shape[::-1],None,None)
+        #"""Performing camera calibration by passing the value of known 3D points (objpoints) and corresponding pixel coordinates of the detected corners (imgpoints)"""
+    ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, gray.shape[::-1],None,None)
 
-print("Camera matrix : \n")
-print(mtx)
-print("dist : \n")
-print(dist)
-print("rvecs : \n")
-print(rvecs)
-print("tvecs : \n")
-print(tvecs)
+    print("Camera matrix : \n")
+    print(mtx)
+    print("dist : \n")
+    print(dist)
+    print("rvecs : \n")
+    print(rvecs)
+    print("tvecs : \n")
+    print(tvecs)
